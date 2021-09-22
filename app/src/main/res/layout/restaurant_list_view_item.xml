@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        app:layout_constraintBottom_toTopOf="@id/addressTextView"
+        app:layout_constraintEnd_toStartOf="@+id/FavoriteIconBarrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Name" />
+
+    <TextView
+        android:id="@+id/addressTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintEnd_toStartOf="@+id/FavoriteIconBarrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+        tools:text="Address" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/FavoriteIconBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="favoriteIconImageView" />
+
+    <ImageView
+        android:id="@+id/favoriteIconImageView"
+        android:layout_width="?minTouchTargetSize"
+        android:layout_height="?minTouchTargetSize"
+        android:layout_marginEnd="16dp"
+        android:padding="6dp"
+        android:src="@drawable/ic_star"
+        app:layout_constraintBottom_toBottomOf="@+id/addressTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nameTextView"
+        app:tint="@color/quantum_orange900" />
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/addressTextViewBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="addressTextView" />
+
+    <ImageView
+        android:id="@+id/ratingIconImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_star"
+        app:layout_constraintStart_toStartOf="@id/nameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/addressTextViewBarrier"
+        app:tint="@color/quantum_yellow800" />
+
+    <TextView
+        android:id="@+id/ratingTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintStart_toEndOf="@+id/ratingIconImageView"
+        app:layout_constraintTop_toBottomOf="@+id/addressTextViewBarrier"
+        tools:text="3.6" />
+
+    <LinearLayout
+        android:id="@+id/priceLevelContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/ratingTextView"
+        app:layout_constraintTop_toBottomOf="@+id/addressTextViewBarrier" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

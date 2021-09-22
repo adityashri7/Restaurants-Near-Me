@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/checkForLocationPermissionsFragment">
+
+    <fragment
+        android:id="@+id/checkForLocationPermissionsFragment"
+        android:name="com.a.restaurantsnearme.ui.home.destinations.CheckForLocationPermissionsFragment">
+        <action
+            android:id="@+id/goToRequestLocationPermissionsFragment"
+            app:destination="@id/requestLocationPermissionsFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/home_nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/goToRestaurantListViewFragment"
+            app:destination="@id/restaurantListViewFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/home_nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/requestLocationPermissionsFragment"
+        android:name="com.a.restaurantsnearme.ui.home.destinations.RequestLocationPermissionsFragment">
+        <action
+            android:id="@+id/goToRestaurantListViewFragment"
+            app:destination="@id/restaurantListViewFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/home_nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/restaurantMapViewFragment"
+        android:name="com.a.restaurantsnearme.ui.home.destinations.RestaurantMapViewFragment">
+        <argument
+            android:name="mapListData"
+            app:argType="com.a.restaurantsnearme.ui.home.MapListData" />
+        <action
+            android:id="@+id/goToRestaurantListViewFragment"
+            app:destination="@id/restaurantListViewFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/home_nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/goToRestaurantDetailViewFragment"
+            app:destination="@id/restaurantListViewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/restaurantListViewFragment"
+        android:name="com.a.restaurantsnearme.ui.home.destinations.RestaurantListViewFragment">
+        <argument
+            android:name="mapListData"
+            app:argType="com.a.restaurantsnearme.ui.home.MapListData" />
+        <action
+            android:id="@+id/goToRestaurantMapViewFragment"
+            app:destination="@id/restaurantMapViewFragment" />
+        <action
+            android:id="@+id/goToRestaurantDetailViewFragment"
+            app:destination="@id/restaurantDetailViewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/restaurantDetailViewFragment"
+        android:name="com.a.restaurantsnearme.ui.home.destinations.RestaurantDetailViewFragment">
+        <argument
+            android:name="restaurant"
+            app:argType="com.a.restaurantsnearme.model.Restaurant" />
+    </fragment>
+
+</navigation>
