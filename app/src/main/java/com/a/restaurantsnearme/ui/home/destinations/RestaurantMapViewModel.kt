@@ -26,7 +26,7 @@ import javax.inject.Inject
 class RestaurantMapViewModel @Inject constructor(
     private val dispatchers: Dispatchers,
     private val placesRepository: PlacesRepository,
-    val fusedLocationClient: FusedLocationProviderClient
+    private val fusedLocationClient: FusedLocationProviderClient
 ) :
     BaseViewModel() {
 

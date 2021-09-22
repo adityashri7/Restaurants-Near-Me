@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.maps.android:maps-ktx:3.1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/141e0077ecb56e22c6b1a410026bd25e/transformed/jetified-maps-ktx-3.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/141e0077ecb56e22c6b1a410026bd25e/transformed/jetified-maps-ktx-3.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/141e0077ecb56e22c6b1a410026bd25e/transformed/jetified-maps-ktx-3.1.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.maps.android/maps-ktx/3.1.0/c495a39fcc1c1ba0fdf69c518f306653697914b4/maps-ktx-3.1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.maps.android/maps-ktx/3.1.0/523c219f71702d5b0a434d2e9789a6be1f082119/maps-ktx-3.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

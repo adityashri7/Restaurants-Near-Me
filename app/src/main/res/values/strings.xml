@@ -1,13 +1,15 @@
 <resources>
-    <string name="app_name">Restaurants Near Me</string>
-    <string name="request_location_message">App needs access to your location to continue</string>
-    <string name="request_location_button">Enable Location</string>
+    <string name="appName">Restaurants Near Me</string>
+    <string name="requestLocationMessage">App needs access to your location to continue</string>
+    <string name="requestLocationButton">Enable Location</string>
     <string name="locationPermissionsDeniedMessage">We will need you to enable Location Permissions manually to use the app</string>
     <string name="locationPermissionsDeniedTitle">Location Permissions Required</string>
     <string name="locationPermissionsDeniedSettingsButton">Settings</string>
     <string name="error_finding_places_message">Error Finding Places</string>
-    <string name="searchview_hint">Showing Nearby. Tap to search.</string>
+    <string name="searchViewHint">Showing Nearby. Tap to search.</string>
     <string name="openMapButton">Map View</string>
     <string name="openListButton">List View</string>
-    <string name="restaurant_detail_title">Restaurant Detail</string>
+    <string name="restaurantDetailTitle">Restaurant Detail</string>
+    <string name="ratingContentDescription">Rating $%1$s stars out of 5</string>
+    <string name="priceContentDescription">Price $%1$s Dollar sign</string>
 </resources>

@@ -75,9 +75,6 @@ class RestaurantListViewFragment : BaseFragment<RestaurantListViewFragmentBindin
                 override fun handleOnBackPressed() {
                     if (searchView.hasFocus()) {
                         searchView.clearFocus()
-                        true
-                    } else {
-                        false
                     }
                 }
             })
@@ -145,6 +142,9 @@ class RestaurantListViewFragment : BaseFragment<RestaurantListViewFragmentBindin
                 nameTextView.text = item.name
                 addressTextView.text = item.formattedAddress
                 ratingTextView.text = item.rating.toString()
+                ratingTextView.contentDescription = context.getString(R.string.ratingContentDescription, item.rating.toString())
+                ratingIconImageView.contentDescription = context.getString(R.string.ratingContentDescription, item.rating.toString())
+                priceLevelContainer.contentDescription = context.getString(R.string.priceContentDescription, item.priceLevel.toString())
                 priceLevelContainer.removeAllViews()
                 for (i in 0 until item.priceLevel) {
                     ImageView(root.context).apply {

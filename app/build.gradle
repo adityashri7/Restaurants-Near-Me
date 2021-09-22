@@ -62,8 +62,8 @@ dependencies {
     // Places
     implementation "com.google.android.libraries.places:places:$places_version"
 
-    // Glide
-    implementation "io.coil-kt:coil:$glide_version"
+    // Coil
+    implementation "io.coil-kt:coil:$coil_version"
 
     // Map
     implementation 'com.google.android.gms:play-services-maps:17.0.1'

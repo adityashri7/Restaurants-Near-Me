@@ -39,13 +39,16 @@ class RestaurantDetailViewFragment : BaseFragment<RestaurantDetailFragmentBindin
         viewModel = ViewModelProvider(this, viewModelFactory).get(RestaurantDetailViewModel::class.java)
         val restaurant = args.restaurant
         binding?.apply {
-            toolbar.title = getString(R.string.restaurant_detail_title)
+            toolbar.title = getString(R.string.restaurantDetailTitle)
             toolbar.setNavigationOnClickListener {
                 findNavController().navigateUp()
             }
             nameTextView.text = restaurant.name
             addressTextView.text = restaurant.formattedAddress
             ratingTextView.text = restaurant.rating.toString()
+            ratingTextView.contentDescription = getString(R.string.ratingContentDescription, restaurant.rating.toString())
+            ratingIconImageView.contentDescription = getString(R.string.ratingContentDescription, restaurant.rating.toString())
+            priceLevelContainer.contentDescription = getString(R.string.priceContentDescription, restaurant.priceLevel.toString())
             priceLevelContainer.removeAllViews()
             for (i in 0 until restaurant.priceLevel) {
                 ImageView(root.context).apply {

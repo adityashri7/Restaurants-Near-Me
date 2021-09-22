@@ -19,7 +19,7 @@ class HomeViewModelFactory(
             RequestLocationPermissionsViewModel::class.java -> RequestLocationPermissionsViewModel() as T
             RestaurantListViewModel::class.java -> RestaurantListViewModel(dispatchers, placesRepository, fusedLocationProviderClient) as T
             RestaurantMapViewModel::class.java -> RestaurantMapViewModel(dispatchers, placesRepository, fusedLocationProviderClient) as T
-            RestaurantDetailViewModel::class.java -> RestaurantDetailViewModel(dispatchers, placesRepository, fusedLocationProviderClient) as T
+            RestaurantDetailViewModel::class.java -> RestaurantDetailViewModel() as T
             else -> throw IllegalArgumentException("Unsupported Model Class: $modelClass")
         }
     }
