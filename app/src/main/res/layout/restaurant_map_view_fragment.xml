@@ -27,8 +27,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:background="@drawable/searchview_background"
-                android:queryHint="@string/searchview_hint"
-                app:defaultQueryHint="@string/searchview_hint"
+                android:queryHint="@string/searchViewHint"
+                app:defaultQueryHint="@string/searchViewHint"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
